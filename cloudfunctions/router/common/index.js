@@ -8,6 +8,10 @@ class LeRouter extends LeBase {
   }
   run() {
     return async (event, context) => {
+      const router = this.routers[event.$url];
+      if (!router) {
+        throw Error('router not found')
+      }
       const Controller = require(this.routers[event.$url]);
       checkRequestParams(event, Controller.rules);
       return await Controller.main.call(this, event, context);
@@ -26,7 +30,7 @@ class LeJob extends LeBase {
       if (jobNames) {
         jobNames.forEach((jobName) => {
           const Controller = require(jobName);
-          Controller.call(this, event, context);
+          Controller.main.call(this, event, context);
         })
       }
     }
