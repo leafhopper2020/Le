@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "周报",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F5F9FC",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "backgroundColor": "#F5F9FC"
+  },
+  "sitemapLocation": "sitemap.json"
+}
