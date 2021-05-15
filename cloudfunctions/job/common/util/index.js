@@ -1,4 +1,4 @@
-const cronParse = require('cron-parser') 
+
 
 function checkRequestParams(params, rules = null) {
   if (!rules) {
@@ -32,6 +32,7 @@ function checkRequestRules(params, rules, keyString = 'event') {
 }
 
 function getJobs(LeJob, triggers) {
+  const cronParse = require('cron-parser') 
   const { jobs } = LeJob;
   const time = new Date().getTime() - 1;
   return Object.keys(jobs).reduce((jobNames, key) => {

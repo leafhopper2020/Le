@@ -1,4 +1,4 @@
-import ServiceUtil from './util/Service.js'
+import ServiceUtil from './util/ServiceUtil.js'
 
 const serviceUtil = new ServiceUtil('router')
 export default class User {
