@@ -1,0 +1,4 @@
+<view>
+  name: {{ user.name }}
+  age: {{ user.age }}
+</view>
